@@ -57,8 +57,7 @@ resume-agent/
 ├── scripts/
 │   └── install.ps1                一键部署到本地 DeerFlow 实例（复制/合并/建库全自动）
 ├── docs/
-│   ├── architecture.md            架构、加载机制与真实踩坑记录
-│   └── interview-qa.md            面试 14 问参考回答
+│   └── architecture.md            架构、加载机制与真实踩坑记录
 └── assets/                        演示截图位
 ```
 
@@ -104,7 +103,7 @@ cd resume-agent
 3. **MCP 而非放开 Shell**——数据库操作收敛在带 Schema、白名单、路由前缀的结构化工具里，攻击面远小于命令执行；
 4. **数据最小化**——关闭长期记忆防止候选人信息跨会话泄漏，联系方式等敏感列不建表。
 
-更多机制与踩坑见 [docs/architecture.md](docs/architecture.md)；面试可能被追问的问题见 [docs/interview-qa.md](docs/interview-qa.md)。
+更多机制与踩坑见 [docs/architecture.md](docs/architecture.md)。
 
 ## License
 

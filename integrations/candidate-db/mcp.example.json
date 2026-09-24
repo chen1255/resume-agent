@@ -1,0 +1,45 @@
+{
+  "_comment": "candidate-db 的 MCP 配置片段。运行 scripts/install.ps1 会自动合并进 deer-flow 根目录的 extensions_config.json；手工安装时把 mcpServers.candidate-db 与 skills 两段合并即可。Windows 下 command 需写 uvx.exe 绝对路径；macOS/Linux 通常直接写 \"uvx\"。锁定 mcp==1.2.1 是因为新版 SDK 移除了旧 sqlite server 使用的 Server.list_resources 装饰器。",
+  "middlewares": [],
+  "mcpServers": {
+    "candidate-db": {
+      "enabled": true,
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--with",
+        "mcp==1.2.1",
+        "mcp-server-sqlite",
+        "--db-path",
+        "/绝对路径/deer-flow/backend/.deer-flow/data/candidates.db"
+      ],
+      "env": {},
+      "tool_name_prefix": true,
+      "session_init_timeout": 120,
+      "tool_call_timeout": 60,
+      "description": "本地 SQLite 候选人库：批量简历的结构化档案入库、SQL 聚合查询与跨批次对比",
+      "capability": {
+        "id": "candidate-db"
+      },
+      "routing": {
+        "mode": "prefer",
+        "priority": 60,
+        "keywords": [
+          "数据库",
+          "SQL",
+          "入库",
+          "存到数据库",
+          "统计",
+          "聚合",
+          "候选人查询",
+          "批次对比"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "candidate-report": { "enabled": true },
+    "batch-screening": { "enabled": true },
+    "interview-prep": { "enabled": true }
+  }
+}

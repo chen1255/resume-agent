@@ -1,0 +1,19 @@
+# 安装/运行时产物（本仓库只保存模板与 schema，不保存真实数据）
+*.db
+*.db-journal
+extensions_config.json
+.env
+.env.*
+
+# 真实简历与评估产物（虚构样例除外）
+examples/resumes/real/
+outputs/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# PowerShell
+*.ps1.bak

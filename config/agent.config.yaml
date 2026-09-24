@@ -1,0 +1,15 @@
+name: resume
+display_name: 简历分析助手
+description: 面向 HR 的简历分析与处理助手，负责解析简历、按岗位 JD 匹配评分、批量汇总对比、识别亮点疑点、生成评估报告与面试问题建议，并在 HR
+  明确要求时提供筛选推荐。
+thinking_enabled: false
+memory_enabled: false
+tool_groups:
+  - file:read
+  - file:write
+skills:
+  - candidate-report
+  - batch-screening
+  - interview-prep
+mcp_plugins:
+  - candidate-db
